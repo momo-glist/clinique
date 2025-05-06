@@ -1,0 +1,50 @@
+/* VenteA.scss */
+
+/* Style pour le conteneur du DataGrid */
+.MuiDataGrid-root {
+    background-color: white !important; /* Fond blanc pour tout le tableau */
+}
+
+/* Style pour le montant total */
+.totalMontant {
+    padding: 10px;
+    text-align: left; /* Aligner à gauche */
+    font-weight: bold;
+    font-size: 16px;
+    color: #4CAF50; /* Couleur verte claire */
+}
+
+.recette {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+
+    &.negative {
+        color: red;
+    }
+
+    &.positive {
+        color: green;
+    }
+}
+
+.export-button {
+    position: absolute;  /* Positionnement absolu */
+    bottom: 20px;        /* Espacement du bas */
+    right: 20px;         /* Espacement de la droite */
+    padding: 10px 20px;  /* Taille du bouton */
+    background-color: #4CAF50; /* Couleur de fond verte */
+    color: white;        /* Texte blanc */
+    border: none;        /* Pas de bordure */
+    border-radius: 5px;  /* Coins arrondis */
+    cursor: pointer;     /* Curseur en forme de main */
+    font-weight: bold;
+}
+
+.export-button:hover {
+    background-color: #45a049; /* Couleur de fond lors du survol */
+}
+
+
+
+

@@ -1,0 +1,36 @@
+.echo {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  
+    .container {
+      display: flex;
+      margin-top: 60px; /* Espace pour la Navbar */
+  
+      .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-left: 170px; 
+        width: 1000px;/* Espace pour la Sidebar */
+  
+        .top {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #f8f8f8;
+          box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+          padding: 10px;
+          margin-bottom: 20px; /* Espace entre top et bottom */
+        }
+  
+        .bottom {
+          flex: 1;
+          background-color: #f0f0f0; /* Fond pour visualiser la section */
+          padding: 20px;
+          margin: 20px;
+        }
+      }
+    }
+}

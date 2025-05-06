@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture - {{invoiceNumber}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: "Fira Sans", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        .invoice { 
+            width: 80%; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background-color: white; 
+            border: 1px solid #ccc; 
+        }
+
+        .invoice-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .invoice-header img {
+            width: 50px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .invoice-header p {
+            text-align: right;
+            margin: 0;
+        }
+
+        .invoice-header p:first-child {
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+
+        .customer-info {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .customer-info div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 30px; 
+            border: 1px solid black; 
+        }
+
+        th, td { 
+            padding: 10px; 
+            text-align: left; 
+            border: 1px solid black; 
+        }
+
+        th { 
+            background-color: #f2f2f2; 
+        }
+
+        .thank-you {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice">
+        <div class="invoice-header">
+            <img src="{{imgHtml}}" alt="Logo de la pharmacie">
+            <div>
+                <p>{{nom_clinique}}</p>
+                <p>{{adresse_clinique}}</p>
+                <p>{{telephone_clinique}}</p>
+            </div>
+        </div>
+        <div class="customer-info">
+            <div>
+                <span>Facture à : {{nom}} {{prenom}}</span>
+                <span>Age: {{age}} ans</span>
+                <span>Residence: {{localite}}</span>
+            </div>
+            <div>
+                <span>Type de soin: {{type_soin}}</span>
+                <span>Prix: {{prix}}</span>
+                <span>Date: {{date}}</span>
+            </div>
+        </div>
+        <h2 class="thank-you">Ordonnance</h2>
+    </div>
+</body>
+</html>

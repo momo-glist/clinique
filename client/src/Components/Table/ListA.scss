@@ -1,0 +1,55 @@
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    .medicament-form {
+      display: flex;
+      flex-wrap: wrap;  // Permet aux éléments de se placer sur plusieurs lignes
+      gap: 20px;  // Ajoute de l'espace entre les éléments
+  
+      .form-group {
+        display: flex;
+        flex-direction: column;  // Met les labels au-dessus des inputs
+        flex: 1 1 45%;  // Chaque champ prend 45% de la largeur de la ligne
+        margin-bottom: 20px;  // Espacement entre les lignes
+        padding: 0 10px;  // Ajoute de l'espace horizontal autour des champs (à l'intérieur du formulaire)
+  
+        label {
+          font-weight: bold;
+          margin-bottom: 5px;  // Ajoute de l'espace sous le label
+        }
+  
+        input {
+          padding: 12px;  // Augmente l'espace intérieur des champs
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 14px;
+          width: 100%;  // Les champs prennent toute la largeur de leur conteneur
+        }
+      }
+  
+      button.submit-btn {
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px;  // Augmente le padding pour le bouton
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;  // Le bouton prend toute la largeur disponible
+      }
+  
+      button.submit-btn:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  
+  

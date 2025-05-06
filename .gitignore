@@ -1,0 +1,16 @@
+# Ignorer les node_modules des deux sous-projets
+client/node_modules/
+server/node_modules/
+
+# Ignorer les fichiers de configuration sensibles
+*.env
+
+# Ignorer les fichiers de log
+*.log
+
+# Ignorer les builds
+client/build/
+server/dist/
+
+# Fichiers système
+.DS_Store

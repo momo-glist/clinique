@@ -1,0 +1,103 @@
+.sidebar {
+    width: 150px; /* Largeur de votre sidebar */
+    height: calc(100vh - 60px); /* Hauteur restante après la Navbar */
+    position: fixed;
+    top: 60px; /* Espace de 60px pour la Navbar */
+    left: 0;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  
+    .top {
+      display: flex;
+      flex-direction: column-reverse; /* Inverse l'ordre des éléments */
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+  
+      .img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+  
+      .logo {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 0;
+        color: #355F2E;
+      }
+    }
+  
+    hr {
+      height: 0;
+      border: 0.5px solid rgb(230, 227, 227);
+    }
+  
+    .center {
+      margin-top: 20px;
+  
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+  
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #999;
+        margin-bottom: 10px;
+      }
+  
+      li {
+        display: flex;
+        margin-bottom: 15px;
+        align-items: center;
+        padding: 5px;
+        cursor: pointer;
+      }
+  
+      li:hover {
+        background-color: #5f8e56e5;
+      }
+  
+      .icon{
+        font-size: 18px;
+        color: #355F2E;
+      }
+
+    span{
+      font-size: 13px;
+      font-weight: 600;
+      color: #888;
+      margin-left: 10px;
+    }
+    }
+  
+    .bottom {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+  
+      .colorOption {
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        border: 1px solid #355F2E;
+        cursor: pointer;
+        margin: 5px;
+  
+        &:nth-child(1) {
+          background-color: whitesmoke;
+        }
+        &:nth-child(2) {
+          background-color: #333;
+        }
+        &:nth-child(3) {
+          background-color: darkblue;
+        }
+      }
+    }
+}

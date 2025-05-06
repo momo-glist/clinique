@@ -1,0 +1,107 @@
+.echo {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .container {
+        display: flex;
+        margin-top: 60px; /* Espace pour la Navbar */
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-left: 170px;
+            width: 1000px; /* Espace pour la Sidebar */
+
+            .top {
+                width: 100%;
+                display: flex;
+                justify-content: space-between; /* Espace entre "Ventes" et les filtres */
+                align-items: center;
+                background-color: #f8f8f8;
+                box-shadow: 0px 4px 6px rgba(50, 50, 50, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06); /* Box shadow amélioré */
+                padding: 20px;
+                margin-bottom: 20px; /* Espace entre top et bottom */
+
+                h1 {
+                    margin-left: 10px; /* Supprime l'espace par défaut autour du h1 */
+                    margin-right: 30px; /* Ajoute un espace entre "Ventes" et les filtres */
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px; /* Espace entre les filtres */
+                    margin-right: 40px;
+                    justify-content: flex-end; /* Aligne les filtres à droite */
+
+                    select {
+                        font-size: 14px;
+                        padding: 8px 12px; /* Ajout de padding pour un look plus attrayant */
+                        border: 1px solid #ccc; /* Bordure grise */
+                        border-radius: 8px; /* Coins arrondis */
+                        background-color: #fff; /* Fond blanc */
+                        box-shadow: 0px 4px 6px rgba(50, 50, 50, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06); /* Box shadow harmonieux */
+                        cursor: pointer; /* Curseur pointer pour indiquer qu'il est interactif */
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            border-color: #355F2E; /* Bordure verte au survol */
+                            background-color: #e8f5e9; /* Fond léger au survol */
+                        }
+
+                        &:focus {
+                            outline: none;
+                            border-color: #355F2E; /* Bordure verte lorsque l'élément est sélectionné */
+                            box-shadow: 0 0 5px #4a883f;
+                        }
+
+                        /* Pour la couleur de l'option sélectionnée */
+                        option:checked {
+                            background-color: #355F2E; /* Fond vert pour l'option sélectionnée */
+                            color: #fff; /* Texte blanc */
+                        }
+
+                        /* Survol des options dans le menu déroulant */
+                        option:hover {
+                            background-color: #e8f5e9; /* Fond vert clair pour le survol de l'option */
+                            color: #355F2E; /* Texte vert pour l'option survolée */
+                        }
+
+                        /* Options sélectionnées (pas seulement au survol, mais lorsque l'option est choisie) */
+                        option:focus {
+                            background-color: #355F2E; /* Fond vert lors de la sélection */
+                            color: white; /* Texte en blanc */
+                        }
+                    }
+
+                    label {
+                        font-size: 14px;
+                        color: #333; /* Couleur de texte améliorée */
+                    }
+                }
+            }
+
+            .bottom {
+                flex: 1;
+                background-color: #f0f0f0; /* Fond pour visualiser la section */
+                padding: 20px;
+                margin: 20px;
+
+                .bottomCharts {
+                    display: flex;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+  
+  

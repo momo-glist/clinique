@@ -1,0 +1,16 @@
+.navbar{
+    width: 100%;
+  background-color: #355F2E; /* Vous pouvez choisir la couleur que vous souhaitez */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center; /* Centrer le texte */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  .title{
+    color: white;
+  }
+}

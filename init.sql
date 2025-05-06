@@ -1,0 +1,4 @@
+-- init.sql
+CREATE USER IF NOT EXISTS 'myuser'@'%' IDENTIFIED BY 'myuserpassword';
+GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;

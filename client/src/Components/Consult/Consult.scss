@@ -1,0 +1,28 @@
+.consult {
+    width: 98%; 
+    height: 500px;
+    max-height: 100%;
+    margin: 0 auto; 
+    padding: 10px; 
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+
+    .actionButton {
+        padding: 6px 12px; /* Ajoute du padding interne aux boutons */
+        font-size: 14px; /* Taille du texte */
+        border: 1px solid #ccc; /* Contour */
+        border-radius: 5px; /* Coins arrondis */
+        text-decoration: none; /* Supprime le soulignement du texte */
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Permet de s'adapter au padding de la cellule */
+      }
+      
+      .doneButton {
+        background-color: #e9ffe6;
+        color: #28a745;
+      }
+}

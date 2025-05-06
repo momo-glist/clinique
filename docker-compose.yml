@@ -1,0 +1,55 @@
+services:
+  mysql:
+    image: mysql:8.0
+    platform: linux/amd64
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: sante
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: myuserpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend:
+    build: ./server
+    container_name: server_container
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "5001:5000"
+    depends_on:
+      - mysql
+    command: ["dockerize", "-wait", "tcp://mysql:3306", "-timeout", "120s", "npm", "start"]
+
+  frontend:
+    build: ./client
+    container_name: client_container
+    restart: always
+    ports:
+      - "4000:80"
+    depends_on:
+      - backend
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    platform: linux/amd64
+    container_name: phpmyadmin_container
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: rootpassword
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:

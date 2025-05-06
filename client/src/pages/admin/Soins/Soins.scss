@@ -1,0 +1,110 @@
+.infirm {
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 80px;
+      padding: 20px;
+      width: 100%;
+      margin-top: 60px;
+    
+      .patient-form {
+        width: 70%;
+        max-width: 1200px;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+    
+        h2 {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+    
+        .form-group {
+          margin-bottom: 20px;
+    
+          label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+          }
+    
+          input,
+          select {
+            width: 100%; /* Assurez-vous que tous les champs ont une largeur de 100% */
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+    
+            /* Ajout de la couleur de bordure au focus */
+            &:focus {
+              border-color: #355F2E !important;
+              box-shadow: 0 0 5px rgba(53, 95, 46, 0.5) !important;
+              outline: none; /* Retirer le contour bleu par défaut */
+            }
+          }
+    
+          select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 12px 40px 12px 12px;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+            &:focus {
+              border-color: #355F2E !important;
+              box-shadow: 0 0 5px rgba(53, 95, 46, 0.5) !important;
+            }
+    
+            &::after {
+              content: "▼";
+              position: absolute;
+              top: 50%;
+              right: 12px;
+              transform: translateY(-50%);
+              pointer-events: none;
+              font-size: 16px;
+              color: #355F2E;
+            }
+          }
+    
+          .row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+    
+            div {
+              flex: 1;
+              min-width: 48%;
+              margin-bottom: 15px;
+            }
+          }
+        }
+        .submit-button {
+          width: auto;
+          padding: 12px 20px;
+          background-color: #355F2E;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+
+          &:hover {
+            background-color: #355f2ee5;
+          }
+        }
+      }
+    }
+  }

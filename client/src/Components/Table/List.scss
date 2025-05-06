@@ -1,0 +1,42 @@
+.list {
+    width: 90%; 
+    height: 500px;
+    max-height: 100%;
+    margin: 0 auto; 
+    padding: 10px; 
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+
+    .cellAction {
+        display: flex;
+        justify-content: center; /* Aligne les boutons au centre */
+        align-items: center;    /* Aligne verticalement les boutons */
+        gap: 5px; /* Réduit l'espace entre les boutons */
+        padding: 4px; /* Ajoute du padding pour éviter que les boutons touchent les bords */
+        height: 100%; /* Remplit la cellule verticalement */
+      }
+      
+      .actionButton {
+        padding: 6px 12px; /* Ajoute du padding interne aux boutons */
+        font-size: 14px; /* Taille du texte */
+        border: 1px solid #ccc; /* Contour */
+        border-radius: 5px; /* Coins arrondis */
+        text-decoration: none; /* Supprime le soulignement du texte */
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Permet de s'adapter au padding de la cellule */
+      }
+      
+      .doneButton {
+        background-color: #e9ffe6;
+        color: #28a745;
+      }
+      
+      
+}
+      
+
+    
